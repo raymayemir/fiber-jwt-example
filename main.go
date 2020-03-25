@@ -30,7 +30,6 @@ func main() {
 	app.Use(jwt.New(cfg))
 
 	app.Get("/", func(c *fiber.Ctx) {
-		c.Fasthttp.SetUserValue("some", "foo")
 		c.Send("Hello Guest!")
 	})
 
